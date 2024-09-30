@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class OtpRequestDto {
+    private int projectId = 1;
 
     @NotNull(message = "Platform can not be null")
     @NotEmpty(message = "Platform can not be empty")
@@ -21,7 +22,10 @@ public class OtpRequestDto {
 
     private String email;
 
+    private String purpose;
+
     private String otp;
+
 
 
 }

@@ -24,7 +24,6 @@ import java.time.LocalDateTime;
 
 @Service
 public class OtpServiceImpl implements OtpService {
-    private int projectId = 1;
 
     private final OtpRepository otpRepository;
     private final SMSService smsService;
@@ -128,9 +127,10 @@ public class OtpServiceImpl implements OtpService {
     OtpEntity convertToEntity(OtpRequestDto object){
 
         OtpEntity entity = new OtpEntity();
-        entity.setProjectId(projectId);
+        entity.setProjectId(object.getProjectId());
         entity.setPlatform(object.getPlatform());
         entity.setDeviceId(object.getDeviceId());
+        entity.setPurpose(object.getPurpose());
         entity.setMobile(object.getMobile());
         entity.setEmail(object.getEmail());
 

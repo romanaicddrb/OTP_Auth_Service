@@ -15,6 +15,7 @@ public class OtpEntity extends BaseEntity {
 
     private String platform; // Web / Android / iOS
     private String deviceId;
+    private String purpose;
 
     @Column(nullable = false, updatable = false)
     private String otp;
