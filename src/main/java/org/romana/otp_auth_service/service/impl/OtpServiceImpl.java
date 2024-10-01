@@ -98,10 +98,9 @@ public class OtpServiceImpl implements OtpService {
 
             if((entity == null) ||
                     (!entity.getEmailStatus().equals(Status.Sent) &&
-                            !entity.getSmsStatus().equals(Status.Sent))){
+                    !entity.getSmsStatus().equals(Status.Sent))){
                 throw new BaseException("Invalid OTP");
             }
-
 
             if(entity.getOtpStatus().equals(OTPStatus.Used)){
                 throw new BaseException("OTP is already used");
