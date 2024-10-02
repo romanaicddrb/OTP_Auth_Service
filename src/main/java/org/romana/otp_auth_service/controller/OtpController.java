@@ -18,7 +18,7 @@ public class OtpController {
         this.otpService = otpService;
     }
 
-    @GetMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/test", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> serviceTest() {
         return new ResponseEntity<>("auth service call", HttpStatus.OK);
     }
