@@ -1,11 +1,11 @@
 package org.romana.otp_auth_service.model.entity;
 
-
-import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.romana.otp_auth_service.model.enums.OTPStatus;
 import org.romana.otp_auth_service.model.enums.Status;
+
+import javax.persistence.*;
 
 @Data
 @NoArgsConstructor

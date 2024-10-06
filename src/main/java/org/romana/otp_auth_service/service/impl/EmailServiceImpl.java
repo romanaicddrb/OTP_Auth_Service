@@ -1,6 +1,5 @@
 package org.romana.otp_auth_service.service.impl;
 
-import jakarta.mail.internet.MimeMessage;
 import org.romana.otp_auth_service.model.EmailInfo;
 import org.romana.otp_auth_service.service.EmailService;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -15,6 +14,8 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
+
+import javax.mail.internet.MimeMessage;
 
 
 @Service

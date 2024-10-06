@@ -1,12 +1,14 @@
 package org.romana.otp_auth_service.model.entity;
 
-import jakarta.persistence.*;
-import jakarta.persistence.Id;
 import lombok.Data;
 import lombok.*;
-import org.springframework.data.annotation.*;
+import org.springframework.data.annotation.CreatedBy;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedBy;
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 

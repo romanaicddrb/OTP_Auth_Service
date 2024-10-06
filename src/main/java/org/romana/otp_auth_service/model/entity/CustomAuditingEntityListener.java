@@ -1,8 +1,8 @@
 package org.romana.otp_auth_service.model.entity;
 
-import jakarta.persistence.PrePersist;
-import jakarta.persistence.PreUpdate;
 
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 import java.time.LocalDateTime;
 
 public class CustomAuditingEntityListener {
