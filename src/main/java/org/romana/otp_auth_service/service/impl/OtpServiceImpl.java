@@ -159,6 +159,7 @@ public class OtpServiceImpl implements OtpService {
         entity.setPlatform(object.getPlatform());
         entity.setDeviceId(object.getDeviceId());
         entity.setPurpose(object.getPurpose());
+        entity.setProjectName(object.getAppName());
         entity.setMobile(object.getMobile());
         entity.setEmail(object.getEmail());
 
@@ -167,14 +168,18 @@ public class OtpServiceImpl implements OtpService {
         if ((entity.getEmail() != null) &&
                 !entity.getEmail().isEmpty() &&
                 !entity.getEmail().isBlank()) {
-            entity.setEmailMessage(mailMsg.replace("#OTP#", entity.getOtp()));
+            mailMsg = mailMsg.replace("#APP_NAME#", entity.getProjectName());
+            mailMsg = mailMsg.replace("#OTP#", entity.getOtp());
+            entity.setEmailMessage(mailMsg);
             entity.setEmailStatus(Status.Pending);
         }
 
         if ((entity.getMobile() != null) &&
                 !entity.getMobile().isEmpty() &&
                 !entity.getMobile().isBlank()) {
-            entity.setSmsMessage(smsMsg.replace("#OTP#", entity.getOtp()));
+            smsMsg = smsMsg.replace("#APP_NAME#", entity.getProjectName());
+            smsMsg = smsMsg.replace("#OTP#", entity.getOtp());
+            entity.setSmsMessage(smsMsg);
             entity.setSmsStatus(Status.Pending);
         }
 

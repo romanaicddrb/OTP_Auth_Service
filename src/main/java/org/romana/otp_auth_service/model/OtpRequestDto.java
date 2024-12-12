@@ -24,6 +24,7 @@ public class OtpRequestDto {
 
     private String otp;
 
+    private String appName;
 
 
 }
